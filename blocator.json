@@ -1,5 +1,8 @@
 {
     "address": "Paseo de Gracias, Barcelona",
-    "location": null,
+    "location": {
+        "lat": 40.4204387,
+        "lng": -3.7034753
+    },
     "zoom": 13
 }

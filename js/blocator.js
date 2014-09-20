@@ -14,15 +14,15 @@ var geocoder;
 var latlngDefault;
 var zoomDefault = 13;   // Zoom por defecto.
 
+// Establecemos coordenadas por defecto (Infinite Loop).
+var lat = 37.3317389;
+var lng = -122.0308209;
+
 // Inicializamos el mapa.
 function initMap()
 {
 	console.log('* LOAD: Inicialización del mapa');
 	geocoder = new google.maps.Geocoder();
-
-	// Establecemos coordenadas por defecto (Infinite Loop).
-	var lat = 37.3317389;
-	var lng = -122.0308209;
 
 	latlngDefault = new google.maps.LatLng(lat, lng);
 
@@ -114,6 +114,7 @@ function setMarker(latlng)
 
     var marker = new google.maps.Marker({
         map: map,
-        position: latlng
+        position: latlng,
+        zIndex: 9
     });
 }
