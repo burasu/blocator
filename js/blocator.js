@@ -5,18 +5,18 @@ $(function()
 	google.maps.event.addDomListener(window, 'load', initMap);
 
     // Una vez cargado el mapa, cargamos el JSON
-    obtenerDireccion();
+    getAddress();
 
 });
 
 var map;
 var geocoder;
 var latlngDefault;
+var zoomDefault = 13;   // Zoom por defecto.
 
 // Inicializamos el mapa.
 function initMap()
 {
-
 	console.log('* LOAD: Inicialización del mapa');
 	geocoder = new google.maps.Geocoder();
 
@@ -28,7 +28,6 @@ function initMap()
 
 	// Definimos el mapa
 	var mapOptions = {
-		zoom: 13,
 		center: latlngDefault,
 		disableDefaultUI: true,
 		panControl: false,
@@ -46,20 +45,27 @@ function initMap()
 
 	// Creamos el objeto mapa
 	map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    map.setCenter(latlngDefault);
 }
 
 
 /** Función con la que cargamos el JSON y tratamos que hacer con las coordenadas. */
-function obtenerDireccion()
+function getAddress()
 {
     console.log('* LOAD: Se procesa el fichero blocator.json');
 
     $.get('blocator.json', function(locator) {
         var address = locator.address;
         var latlng = locator.location;
+        var zoom = locator.zoom;
 
         console.log('* LOAD: Procesamos las variables');
+
+        if (zoom == null) {
+            zoom = zoomDefault;
+        }
+
+        // Aplicamos el zoom indicado en el fichero.
+        map.setZoom(zoom);
 
         // El orden de prioridad será coordenadas, y luego dirección.
         if (latlng != null) {
@@ -69,7 +75,7 @@ function obtenerDireccion()
         }
         else if (address != null) {
             console.log('* LOAD: Procesamos la dirección.');
-            procesarAddress(address);
+            processAddress(address);
         }
         else {
             console.log('* LOAD: Procesamos las coordenadas por defecto.');
@@ -85,7 +91,7 @@ function obtenerDireccion()
 
 
 /** Función con la que procesamos la dirección recibida y calculamos sus coordenadas */
-function procesarAddress(address)
+function processAddress(address)
 {
     console.log('* LOAD: Empezamos a procesar la direccion');
 
@@ -100,9 +106,10 @@ function procesarAddress(address)
 }
 
 
-/** Función con la que establecemos la marca y centrapos el mapa. */
+/** Función con la que establecemos la marca y centramos el mapa. */
 function setMarker(latlng)
 {
+    // Centramos el mapa.
     map.setCenter(latlng);
 
     var marker = new google.maps.Marker({
