@@ -1,4 +1,4 @@
 bLocator
 ========
 
-bLocator is an experimental code for the geo-coordinates of a map or direction over.
+bLocator es un código experimental para la geolocalización a partir de unas coordenadas o a partir de una dirección dada.
