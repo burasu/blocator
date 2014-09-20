@@ -16,7 +16,7 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-	<script type="text/javascript" src="js/blocator.js"></script>
-	
+    <script type="text/javascript" src="js/blocator.js"></script>
+
 </body>
 </html>
