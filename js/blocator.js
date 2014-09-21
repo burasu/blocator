@@ -1,4 +1,3 @@
-//jQuery(document).ready(function($)
 $(function()
 {
     // establecemos los parametros del mapa de google por defecto.
