@@ -48,13 +48,14 @@ Componentes principales
     width: 32px;
     cursor: pointer;
     margin-left: 10px;
-    background-color: rgba(211, 104, 104, 0.9);
+    background-color: rgba(206, 29, 39, 0.9);
     background-repeat: no-repeat;
     background-size: 32px 64px;
     background-image: url("../img/baenne-icon-controller.svg");
 }
 .no-touch #baenne-zoom-in:hover, .no-touch #baenne-zoom-out:hover {
-    background-color: #d36868;
+/*    background-color: #d36868;*/
+    background-color: rgba(206, 29, 39, 0.6);
 }
 @media only screen and (min-width: 768px) {
     #baenne-zoom-in, #baenne-zoom-out {

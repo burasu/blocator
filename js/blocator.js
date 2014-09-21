@@ -9,12 +9,10 @@ $(function()
     var map;
     var latlngDefault;
 
-    // iconos para los marcadores en google map - .png falla en IE11
-    var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-    var marker_url = ( is_internetExplorer11 ) ? 'img/baenne-icon-location.png' : 'img/baenne-icon-location.svg';
+    var marker_url = 'img/baenne-icon-location.png';
 
     // definimos los colores básicos del mapa, junto a los valores de brillo y saturación.
-    var	main_color = '#2d313f',
+    var	main_color = '#7BA9B6',
         saturation_value= -20,
         brightness_value= 5;
 
