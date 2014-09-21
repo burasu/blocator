@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
 
@@ -9,14 +9,19 @@
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr.js"></script>
 </head>
 <body>
 
-	<div id="map"></div>
+    <section id="baenne-map">
+        <div id="map-container"></div>
+        <div id="baenne-zoom-in"></div>
+        <div id="baenne-zoom-out"></div>
+    </section>
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script type="text/javascript" src="js/blocator.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="js/blocator.js"></script>
 
 </body>
 </html>

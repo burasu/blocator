@@ -1,5 +1,78 @@
-html, body, #map {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+/* -------------------------------- 
+
+Estilos primarios
+
+-------------------------------- */
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #e7eaf0;
+    color: #2d313f;
+    font-size: 100%;
+    height: 100%;
+}
+
+/* -------------------------------- 
+
+Componentes principales
+
+-------------------------------- */
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #e7eaf0;
+}
+
+#baenne-map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#baenne-zoom-in, #baenne-zoom-out {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: rgba(211, 104, 104, 0.9);
+    background-repeat: no-repeat;
+    background-size: 32px 64px;
+    background-image: url("../img/baenne-icon-controller.svg");
+}
+.no-touch #baenne-zoom-in:hover, .no-touch #baenne-zoom-out:hover {
+    background-color: #d36868;
+}
+@media only screen and (min-width: 768px) {
+    #baenne-zoom-in, #baenne-zoom-out {
+        margin-left: 50px;
+    }
+}
+
+#baenne-zoom-in {
+    background-position: 50% 0;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+@media only screen and (min-width: 768px) {
+    #baenne-zoom-in {
+        margin-top: 50px;
+    }
+}
+
+#baenne-zoom-out {
+    background-position: 50% -32px;
 }

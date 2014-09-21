@@ -1,8 +1,6 @@
 bLocator
 =========
 
-[TOC]
-
 Version 1.0
 
 ##Sumario
@@ -36,18 +34,17 @@ otro ejemplo sería
 
 ##Changelog
 
-
 #### Version 1.0
 
 * Commit inicial
 
-##Autor
+##Author
 
 Email: <blasfs@icloud.com>
 
 Twitter: [@burasu76](http://twitter.com/burasu76)
 
-GitHub: <https://github.com/burasue>
+GitHub: <https://github.com/burasu>
 
 
 ###Code License
