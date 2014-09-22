@@ -234,7 +234,7 @@ $(function()
     {
         console.log('* LOAD: Se procesa el fichero blocator.json');
 
-        $.get('blocator.json', function(locator) {
+        $.getJSON('blocator.json', function(locator) {
             var address = locator.address;
             var latlng = locator.location;
             var zoom = locator.zoom;
@@ -247,6 +247,10 @@ $(function()
 
             // Aplicamos el zoom indicado en el fichero.
             map.setZoom(zoom);
+
+            console.log(address);
+            console.log(latlng);
+            console.log(zoom);
 
             // El orden de prioridad será coordenadas, y luego dirección.
             if (latlng != null) {
@@ -305,6 +309,7 @@ $(function()
             visible: true,
             icon: marker_url,
         });
+
     }
 });
 
