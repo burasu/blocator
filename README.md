@@ -33,7 +33,7 @@ otro ejemplo sería
 
 ###Demo
 
-[Página de demostración](http://blasfernandez.es/proyectos/blocator/)
+[Página de demostración](http://blocator.herokuapp.com/)
 
 
 ##Changelog
